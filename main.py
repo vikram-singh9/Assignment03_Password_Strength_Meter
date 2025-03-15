@@ -11,7 +11,15 @@ def password_strength_checker(password):
     score = 0
     common_passwords = ["12345678", "password123", "vikram123", "infinity999", "abcdefghij"]
     if password in common_passwords:
-        score += 1
+        return "❌ This is too common ! try with another one..."
+    feedback = []
+
+    if len(password) >= 8:
+        score +=1
+    else:
+        return feedback.append("Password should be atleast 8 charactors! try again...")
+    
+
 
 
 st.title("Password Stength Checker🔏")
